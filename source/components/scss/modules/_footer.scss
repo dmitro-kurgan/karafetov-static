@@ -1,0 +1,81 @@
+footer {
+	.footer {
+		&__content {
+			display: flex;
+			justify-content: space-between;
+			padding-bottom: 45px;
+			@media #{$mobile} {
+				padding-bottom: 15px;
+				display: block;
+			}
+		}
+		&__left, &__center, &__right {
+			width: 33.33%;
+			@media #{$mobile} {
+				width: 100%;
+			}
+		}
+		&__develop, &__copyright {
+			font-size: 16px;
+			font-weight: 300;
+			@media #{$tablet} {
+				font-size: 12px;
+			}
+			@media #{$mobile} {
+				font-size: 14px;
+				text-align: center;
+			}
+		}
+		&__develop {
+			a {
+				padding-right: 105px;
+				position: relative;
+				@media #{$mobile} {
+					padding-right: 95px;
+				}
+				&:after {
+					content: '';
+					position: absolute;
+					right: 0px;
+					top: 0px;
+					bottom: 0px;
+					margin: auto;
+					background-image: url(../images/unit-space.svg);
+					background-repeat: no-repeat;
+					background-position: center;
+					background-size: contain;
+					width: 109px;
+					height: 23px;
+				}
+			}
+		}
+		&__copyright {
+			text-align: center;
+			@media #{$mobile} {
+				margin: 20px 0;
+			}
+		}
+		&__socials {
+			text-align: right;
+			@media #{$mobile} {
+				text-align: center;
+			}
+			ul {
+				display: inline-block;
+				@media #{$mobile} {
+					text-align: center;
+				}
+				li {
+					display: inline-block;
+					vertical-align: middle;
+					& + li {
+						margin-left: 8px;
+					}
+				}
+			}
+			.fa-apple-music-o {
+				font-size: 11px;
+			}
+		}
+	}
+}

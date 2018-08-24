@@ -1,0 +1,97 @@
+extends ../templates/base
+
+include ../templates/mixins
+
+block variables
+	- var classBody = 'album-page';
+	- var classWrapper = 'album';
+	- var page = "album"; 
+	- var pageName = 'Дискография';
+
+block title
+	title #{pageName}
+
+block header
+	include ../modules/header
+	+header()
+
+block main
+	+breadcrumb()
+		li
+			a(href='albums.html') #{pageName}
+		li тут будет название
+	.album
+		section.album__banner
+			.album__banner-cover(style="background-image: url(" + require('../../components/images/cover.jpg') + ")")
+			.album__banner-content.container
+				.album__cover(style="background-image: url(" + require('../../components/images/cover.jpg') + ")")
+				.album__info
+					.album__title
+						h1 Название
+					.album__artist
+						p Исполнитель
+					.album__genre
+						p Жанр: Тут будет жанр
+					.album__more
+						ul
+							li.album__more--year 2018
+							li.album__more--songs 13 песен
+							li.album__more--time 50 мин
+		section.album__list.container
+			ul
+				mixin li(num, name)
+					li
+						.album__list-left
+							.album__name
+								p
+									span #{num}
+									span #{name}
+						.album__list-right
+							.album__time
+								p
+									span.album__time--min 7
+									span :
+									span.album__time-sec 26
+							.album__btns
+								ul
+									li
+										//- a(href="#", target="_blank")
+										//- 	img(src="http://www.niftybuttons.com/googleplay/googleplay-button1.png", alt="Get on Google Play (Button via NiftyButtons.com)")
+										a(href="#", target="_blank")
+											img(src=require("../../components/images/googleplay.svg"), alt="Get on Google Play (Button via NiftyButtons.com)")
+									li
+										//- a(href="#", target="_blank")
+										//- 	img(src="http://www.niftybuttons.com/itunes/itunesbutton1.png", alt="iTunes Button (via NiftyButtons.com)")
+										a(href="#", target="_blank")
+											img(src=require("../../components/images/itunes.svg"), alt="iTunes Button (via NiftyButtons.com)")
+									li
+										a(href="#", target="_blank")
+											img(src=require("../../components/images/yandex-music.svg"), alt="Get on Yandex Music")
+				+li('1', 'Тут будет название')
+				+li('2', 'Тут будет второе название к песни')
+				+li('3', 'Следующее название')
+				+li('4', 'Тут будет четвертое название')
+		section.album__slider.container
+			h2 Другие наши альбомы
+			.slider.slick-albums
+				mixin slide(img, name, artists, year)
+					div
+						.albums__item
+							a(href="album.html")
+								.albums__img
+									img(src=require("../../components/images/album-" + img + ".png"), alt="")
+									.albums__hidden
+										p #{name}
+								.albums__info
+									.albums__name
+										p #{name}
+									.albums__artists
+										p #{artists}
+									.albums__year
+										p #{year}
+				+slide('1', 'Название альбома', 'Тут будут исполнители', '2018')
+				+slide('1', 'Название альбома', 'Тут будут исполнители', '2018')
+				+slide('1', 'Название альбома', 'Тут будут исполнители', '2018')
+				+slide('1', 'Название альбома', 'Тут будут исполнители', '2018')
+				+slide('1', 'Название альбома', 'Тут будут исполнители', '2018')
+				+slide('1', 'Название альбома', 'Тут будут исполнители', '2018')

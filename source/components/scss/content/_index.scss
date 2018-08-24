@@ -1,0 +1,30 @@
+.wrapper {
+	overflow: hidden;
+	&--index {
+		header {
+			position: absolute;
+			left: 0px;
+			right: 0px;
+			width: 100%;
+		}
+		footer {
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+			right: 0px;
+			width: 100%;
+		}
+	}
+}
+.main {
+	&__layout {
+		background-color: rgba(#000, 0.39);
+		height: 100%;
+	}
+	&__banner {
+		height: 100vh;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}

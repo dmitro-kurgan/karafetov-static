@@ -1,0 +1,18 @@
+extends ../templates/base
+
+block variables
+	- var classBody = 'index-page';
+	- var classWrapper = 'index';
+	- var page = "index";
+
+block title
+	title Index
+
+block header
+	include ../modules/header
+	+header()
+
+block main
+	.main
+		.main__banner(style="background-image: url(" + require('../../components/images/background-1.jpg') + ")")
+			.main__layout

@@ -1,0 +1,60 @@
+extends ../templates/base
+
+include ../templates/mixins
+
+block variables
+	- var classBody = 'news-page';
+	- var classWrapper = 'news';
+	- var page = "news"; 
+	- var pageName = 'Новости';
+
+block title
+	title #{pageName}
+
+block header
+	include ../modules/header
+	+header()
+
+block main
+	.news.container
+		+breadcrumb()
+		.news__title
+			h1 #{pageName}
+			p
+				| Вы можете ознакомиться с нашими альбомами, скачать их, а так же послушать
+		ul.news__list
+			mixin newsItem(img)
+				li.news__item
+					.news__item-left
+						.news__data
+							span.news__data--day 09
+							span.news__data--month Июля
+						.news__full-data
+							img(src=require("../../components/images/calendar.svg"), alt="")
+							span
+								p.news__full-data--month 10.06
+								p.news__full-data--year 2018
+						.news__img(style="background-image: url(" + require('../../components/images/photo-' + img + '.jpg') + ")")
+					.news__item-center
+						.news__info
+							.news__name
+								span Название мероприятия
+							.news__short
+								span Короткое описание
+							.news__large.scrollbar-inner
+								p
+									| Значимость этих проблем настолько очевидна, что сложившаяся структура организации представляет...Значимость этих проблем настолько очевидна, что сложившаяся структура организации представляет.. Значимость этих проблем настолько очевидна, что сложившаяся структура  организации представляет..
+						.news__loc
+							p Тут будет место
+						.news__time
+							p 10:00
+					.news__item-right
+						a(href="article.html").btn Подробнее
+							span
+			+newsItem('6')
+			+newsItem('5')
+			+newsItem('5')
+			+newsItem('5')
+			+newsItem('5')
+		a(href="#").btn.btn--loadmore Все новости
+			span

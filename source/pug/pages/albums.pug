@@ -1,0 +1,52 @@
+extends ../templates/base
+
+include ../templates/mixins
+
+block variables
+	- var classBody = 'albums-page';
+	- var classWrapper = 'albums';
+	- var page = "albums"; 
+	- var pageName = 'Дискография';
+
+block title
+	title #{pageName}
+
+block header
+	include ../modules/header
+	+header()
+
+block main
+	.albums.container
+		+breadcrumb()
+		.albums__title
+			h1 #{pageName}
+			p
+				| Вы можете ознакомиться с нашими альбомами, скачать их, а так же послушать
+		ul.albums__block.row
+			mixin blockItem(img, name, artists, year)
+				li.albums__item.col-md-4.col-sm-6
+					a(href="album.html")
+						.albums__img
+							img(src=require("../../components/images/album-" + img + ".png"), alt="")
+							.albums__vinyl
+								img(src=require("../../components/images/vinyl.png"), alt="")
+								.albums__vinyl-inner(style="background-image: url(" + require('../../components/images/album-' + img + '.png') + ")")
+									p #{name}
+							.albums__hidden
+								p #{name}
+						.albums__info
+							.albums__name
+								p #{name}
+							.albums__artists
+								p #{artists}
+							.albums__year
+								p #{year}
+			+blockItem('1', 'Название альбома', 'Тут будут исполнители', '2018')
+			+blockItem('1', 'Название альбома', 'Тут будут исполнители', '2018')
+			+blockItem('1', 'Название альбома', 'Тут будут исполнители', '2018')
+			+blockItem('1', 'Название альбома', 'Тут будут исполнители', '2018')
+			+blockItem('1', 'Название альбома', 'Тут будут исполнители', '2018')
+			+blockItem('1', 'Название альбома', 'Тут будут исполнители', '2018')
+			+blockItem('1', 'Название альбома', 'Тут будут исполнители', '2018')
+			+blockItem('1', 'Название альбома', 'Тут будут исполнители', '2018')
+			+blockItem('1', 'Название альбома', 'Тут будут исполнители', '2018')

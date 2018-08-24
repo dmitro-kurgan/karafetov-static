@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Контакты</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no">
+  <link href="./css/style.css" rel="stylesheet"></head>
+  <body class="contacts-page">
+    <div class="wrapper wrapper--contacts">
+            <header>
+              <div class="header">
+                <div class="container">
+                  <div class="header__content">
+                    <div class="header__left" id="headerLeft">
+                      <div class="header__hamburger" id="hamburger"><span class="header__hamburger--top"></span><span class="header__hamburger--mid"></span><span class="header__hamburger--bottom"></span></div>
+                      <ul class="clearfix" id="headerLeftMenu">
+                        <li><a href="./">Главная</a></li>
+                        <li><a href="news.html">Новости</a></li>
+                        <li><a href="bio.html">Биография</a></li>
+                      </ul>
+                    </div>
+                    <div class="header__center">
+                      <div class="header__logo"><a href="./"></a></div>
+                    </div>
+                    <div class="header__right" id="headerRight">
+                      <ul class="clearfix" id="headerRightMenu">
+                        <li><a href="albums.html">Дискография</a></li>
+                        <li><a href="gallery.html">Гелерея</a></li>
+                        <li><a class="active" href="contacts.html">Контакты</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="header__lang"><a href="#">rus</a></div>
+                  <div class="header__mob-menu" id="mobMenu"></div>
+                </div>
+              </div>
+            </header>
+      <div class="content">
+        <div class="breadcrumb">
+          <div class="breadcrumb__content">
+            <ul class="clearfix">
+              <li><a href="./">Главная</a></li>
+              <li>Контакты</li>
+            </ul>
+          </div>
+        </div>
+        <div class="contacts container">
+          <ul class="row">
+            <li class="contacts__left col-md-4">
+              <h2>Наши<br>контакты</h2>
+              <div class="contacts__contacts">
+                <ul class="clearfix">
+                  <li><span>Менеджер шоу Ирина:</span><a href="tel:+380661888876">+38(066) 18 88 876</a></li>
+                  <li><span>E-mail:</span><a href="mailto:show.karafetov@gmail.com">show.karafetov@gmail.com</a></li>
+                </ul>
+              </div>
+              <div class="contacts__socials">
+                <h2>Мы в социальных<br>сетях</h2>
+                <ul class="clearfix">
+                  <li><a class="contacts__socials--youtube" href="https://youtube.com" target="_blank"><span class="fa fa-youtube-play"></span>
+                      <p>Youtube</p></a></li>
+                  <li><a class="contacts__socials--instagram" href="https://instagram.com" target="_blank"><span class="fa fa-instagram"></span>
+                      <p>Instagram</p></a></li>
+                  <li><a class="contacts__socials--soundcloud" href="https://soundcloud.com" target="_blank"><span class="fa fa-soundcloud"></span>
+                      <p>Soundcloud</p></a></li>
+                  <li><a class="contacts__socials--facebook" href="https://facebook.com" target="_blank"><span class="fa fa-facebook"></span>
+                      <p>Facebook</p></a></li>
+                  <li><a class="contacts__socials--itunes" href="https://www.apple.com/apple-music/" target="_blank"><span class="fa-apple-music-o fa-stack"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-music fa-stack-1x"></i></span>
+                      <p>Itunes</p></a></li>
+                  <li><a class="contacts__socials--facebook" href="https://facebook.com" target="_blank"><span class="fa fa-vk"></span>
+                      <p>Vkontakte</p></a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="contacts__right col-md-8">
+              <form class="contacts__form">
+                <h2>Свяжитесь<br>с нами</h2>
+                <ul class="row">
+                  <li class="contacts__radio form-group col-sm-12">
+                    <div class="radio active">
+                      <label for="radio1">
+                        <input type="radio" name="radio" id="radio1">
+                        <div class="radio-circle"></div>Организация концертов
+                      </label>
+                    </div>
+                  </li>
+                  <li class="contacts__radio form-group col-sm-12">
+                    <div class="radio">
+                      <label for="radio2">
+                        <input type="radio" name="radio" id="radio2">
+                        <div class="radio-circle"></div>Сотрудничество
+                      </label>
+                    </div>
+                  </li>
+                  <li class="contacts__radio form-group col-sm-12">
+                    <div class="radio">
+                      <label for="radio3">
+                        <input type="radio" name="radio" id="radio3">
+                        <div class="radio-circle"></div>Организация шоу
+                      </label>
+                    </div>
+                  </li>
+                  <li class="form-group form-group--title col-sm-12">
+                    <h3>Имя*</h3>
+                  </li>
+                  <li class="form-group col-sm-6">
+                    <input class="form-control" type="text" placeholder="Ваше имя" id="name" required>
+                  </li>
+                  <li class="form-group col-sm-6">
+                    <input class="form-control" type="text" placeholder="Ваша компания" id="company">
+                  </li>
+                  <li class="form-group form-group--title col-sm-12">
+                    <h3>Информация*</h3>
+                  </li>
+                  <li class="form-group col-sm-6">
+                    <input class="form-control" type="text" placeholder="E-mail" id="email" required>
+                  </li>
+                  <li class="form-group col-sm-6">
+                    <input class="form-control" type="text" placeholder="Телефон" id="tel" required>
+                  </li>
+                  <li class="form-group form-group--title col-sm-12">
+                    <h3>Сообщение</h3>
+                  </li>
+                  <li class="form-group col-sm-12">
+                    <textarea class="form-control" type="text" placeholder="Ваше сообщение" id="email"></textarea>
+                  </li>
+                  <li class="form-group col-sm-12 contacts__btns">
+                    <div class="contacts__form-attachfile">
+                      <input class="inputfile btn" id="file" type="file" name="file" data-multiple-caption="{count} files" multiple>
+                      <label for="file"><span>Прикрепить</span></label>
+                    </div>
+                    <button class="btn" type="submit">Отправить</button>
+                  </li>
+                </ul>
+              </form>
+            </li>
+          </ul>
+        </div>
+      </div>
+<footer>
+  <div class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__left">
+          <div class="footer__develop"><a href="https://unitspace.top" target="_blank">Разработка сайтов</a></div>
+        </div>
+        <div class="footer__center">
+          <div class="footer__copyright">
+            <p>© 2018 karafetov.com. Все права защищены</p>
+          </div>
+        </div>
+        <div class="footer__right">
+          <div class="footer__socials">
+            <ul>
+              <li><a href="https://instagram.com" target="_blank"><span class="fa fa-instagram"></span></a></li>
+              <li><a href="https://facebook.com" target="_blank"><span class="fa fa-facebook"></span></a></li>
+              <li><a href="https://soundcloud.com" target="_blank"><span class="fa fa-soundcloud"></span></a></li>
+              <li><a href="https://www.apple.com/apple-music/" target="_blank"><span class="fa-apple-music-o fa-stack"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-music fa-stack-1x"></i></span></a></li>
+              <li><a href="https://youtube.com" target="_blank"><span class="fa fa-youtube-play"></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+    </div>
+  <script type="text/javascript" src="js/bundle.js"></script></body>
+</html>

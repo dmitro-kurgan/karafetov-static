@@ -1,0 +1,171 @@
+.wrapper {
+	overflow: hidden;
+	&--albums {
+		.breadcrumb {
+			padding-top: 55px;
+			// padding-top: 150px;
+		}
+	}
+}
+.albums {
+	padding-top: 150px;
+	padding-bottom: 140px;
+	@media #{$tablet} {
+		padding-top: 0px;
+		padding-bottom: 100px;
+	}
+	&__title {
+		padding-top: 25px;
+		padding-bottom: 15px;
+		text-align: center;
+		max-width: 530px;
+		margin: auto;
+		h1 {
+			font-size: 49px;
+			font-family: $second_font;
+			text-transform: uppercase;
+			padding-bottom: 10px;
+			@media #{$mobile} {
+				font-size: 34px;
+			}
+		}
+		p {
+			font-size: 24px;
+			font-weight: 300;
+			color: #c2c2c7;
+			@media #{$mobile} {
+				font-size: 18px;
+			}
+		}
+	}
+	&__block {
+		margin: 0 -65px;
+	}
+	&__hidden {
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		left: 0px;
+		bottom: 0px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		opacity: 0;
+		background-color: rgba(#000, 0.5);
+		font-family: $third_font;
+		font-size: 36px;
+		font-weight: 700;
+		transition: 0.3s all ease;
+		color: #f2f1ed;
+		text-transform: uppercase;
+		text-align: center;
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			bottom: 0px;
+			left: 0px;
+			background-image: url(../images/shape.png);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		p {
+		    word-spacing: 130px;
+    		line-height: 1.25;
+		}
+	}
+	&__item {
+		margin-top: 115px;
+		padding-left: 65px;
+		padding-right: 65px;
+		@media #{$tablet} {
+			margin-top: 55px;
+		}
+		&:hover {
+			.albums {
+				&__vinyl {
+					right: -50%;
+					@include addPrefix(transform, rotate(0deg));
+				}
+				&__hidden {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	&__img {
+		position: relative;
+		width: 296px;
+		height: 296px;
+		img {
+			width: 296px;
+			height: 296px;
+			@include addPrefix(object-fit, cover);
+		}
+	}
+	&__vinyl {
+		position: absolute;
+		top: 0px;
+		bottom: 0px;
+		right: 0px;
+		z-index: -1;
+		@include addPrefix(transform, rotate(-90deg));
+		transition: 0.6s right ease, 0.6s transform ease;
+		&-inner {
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			border-radius: 50%;
+			top: 0px;
+			left: 0px;
+			bottom: 0px;
+			right: 0px;
+			margin: auto;
+			display: flex;
+			align-items: center;
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0px;
+				right: 0px;
+				bottom: 0px;
+				left: 0px;
+				background-image: url(../images/shape.png);
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			p {
+				text-transform: uppercase;
+				font-family: $third_font;
+				font-size: 14px;
+				font-weight: 700;
+				word-spacing: 60px;
+	    		line-height: 1.25;
+				text-align: center;
+			}
+		}
+	}
+	&__name {
+		margin-top: 25px;
+		font-size: 27px;
+		font-weight: 500;
+	}
+	&__artists, &__year {
+		font-family: $second_font;
+		font-weight: 500;
+		font-size: 20px;
+		color: #abaaaa;
+	}
+	&__artists {
+		margin-top: 5px;
+	}
+	&__year {
+		margin-top: 5px;
+	}
+}

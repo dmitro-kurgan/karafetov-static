@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Галерея</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no">
+  <link href="./css/style.css" rel="stylesheet"></head>
+  <body class="gallery-page">
+    <div class="wrapper wrapper--gallery">
+            <header>
+              <div class="header">
+                <div class="container">
+                  <div class="header__content">
+                    <div class="header__left" id="headerLeft">
+                      <div class="header__hamburger" id="hamburger"><span class="header__hamburger--top"></span><span class="header__hamburger--mid"></span><span class="header__hamburger--bottom"></span></div>
+                      <ul class="clearfix" id="headerLeftMenu">
+                        <li><a href="./">Главная</a></li>
+                        <li><a href="news.html">Новости</a></li>
+                        <li><a href="bio.html">Биография</a></li>
+                      </ul>
+                    </div>
+                    <div class="header__center">
+                      <div class="header__logo"><a href="./"></a></div>
+                    </div>
+                    <div class="header__right" id="headerRight">
+                      <ul class="clearfix" id="headerRightMenu">
+                        <li><a href="albums.html">Дискография</a></li>
+                        <li><a class="active" href="gallery.html">Гелерея</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="header__lang"><a href="#">rus</a></div>
+                  <div class="header__mob-menu" id="mobMenu"></div>
+                </div>
+              </div>
+            </header>
+      <div class="content">
+        <section class="gallery container">
+          <div class="gallery__top row">
+            <div class="gallery__top-left col-md-6">
+              <div class="breadcrumb">
+                <div class="breadcrumb__content">
+                  <ul class="clearfix">
+                    <li><a href="./">Главная</a></li>
+                    <li>Галерея</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="gallery__title">
+                <h2>Галерея</h2>
+              </div>
+            </div>
+            <div class="gallery__top-right col-md-6">
+              <div class="gallery__nav">
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#tab1" data-toggle="tab">Все</a></li>
+                  <li><a href="#tab2" data-toggle="tab">Видео</a></li>
+                  <li><a href="#tab3" data-toggle="tab">Фото</a></li>
+                  <li><a href="#tab4" data-toggle="tab">Цыганское шоу</a></li>
+                  <li><a href="#tab5" data-toggle="tab">Музыканты</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="gallery__content">
+            <div class="tab-content">
+              <div class="tab-pane fade in active" id="tab1">
+                              <ul class="gallery__list row">
+                                              <li class="gallery__item col-sm-6"><a class="gallery__img" href="images/img-1.jpg" data-fancybox="gallery" style="background-image: url(images/img-1.jpg)"></a>
+                                                <div class="gallery__name">
+                                                  <p>фото</p>
+                                                </div>
+                                                <div class="gallery__data">
+                                                  <p>10.06.2018</p>
+                                                </div>
+                                              </li>
+                                              <li class="gallery__item col-sm-6">
+                                                <div class="gallery__video">
+                                                  <iframe src="https://www.youtube.com/embed/Dcrb5DF5yZo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                                                </div>
+                                                <div class="gallery__name">
+                                                  <p>видео</p>
+                                                </div>
+                                                <div class="gallery__data">
+                                                  <p>10.06.2018</p>
+                                                </div>
+                                              </li>
+                                              <li class="gallery__item col-sm-6"><a class="gallery__img" href="images/img-2.jpg" data-fancybox="gallery" style="background-image: url(images/img-2.jpg)"></a>
+                                                <div class="gallery__name">
+                                                  <p>фото</p>
+                                                </div>
+                                                <div class="gallery__data">
+                                                  <p>10.06.2018</p>
+                                                </div>
+                                              </li>
+                                              <li class="gallery__item col-sm-6"><a class="gallery__img" href="images/img-3.jpg" data-fancybox="gallery" style="background-image: url(images/img-3.jpg)"></a>
+                                                <div class="gallery__name">
+                                                  <p>фото</p>
+                                                </div>
+                                                <div class="gallery__data">
+                                                  <p>10.06.2018</p>
+                                                </div>
+                                              </li>
+                                              <li class="gallery__item col-sm-6">
+                                                <div class="gallery__video">
+                                                  <iframe src="https://www.youtube.com/embed/Dcrb5DF5yZo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                                                </div>
+                                                <div class="gallery__name">
+                                                  <p>видео</p>
+                                                </div>
+                                                <div class="gallery__data">
+                                                  <p>10.06.2018</p>
+                                                </div>
+                                              </li>
+                                              <li class="gallery__item col-sm-6"><a class="gallery__img" href="images/img-4.jpg" data-fancybox="gallery" style="background-image: url(images/img-4.jpg)"></a>
+                                                <div class="gallery__name">
+                                                  <p>фото</p>
+                                                </div>
+                                                <div class="gallery__data">
+                                                  <p>10.06.2018</p>
+                                                </div>
+                                              </li>
+                              </ul>
+              </div>
+              <div class="tab-pane fade" id="tab2">
+                              <ul class="gallery__list row">
+                                              <li class="gallery__item col-sm-6"><a class="gallery__img" href="images/img-1.jpg" data-fancybox="gallery" style="background-image: url(images/img-1.jpg)"></a>
+                                                <div class="gallery__name">
+                                                  <p>фото</p>
+                                                </div>
+                                                <div class="gallery__data">
+                                                  <p>10.06.2018</p>
+                                                </div>
+                                              </li>
+                                              <li class="gallery__item col-sm-6">
+                                                <div class="gallery__video">
+                                                  <iframe src="https://www.youtube.com/embed/Dcrb5DF5yZo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                                                </div>
+                                                <div class="gallery__name">
+                                                  <p>видео</p>
+                                                </div>
+                                                <div class="gallery__data">
+                                                  <p>10.06.2018</p>
+                                                </div>
+                                              </li>
+                                              <li class="gallery__item col-sm-6"><a class="gallery__img" href="images/img-2.jpg" data-fancybox="gallery" style="background-image: url(images/img-2.jpg)"></a>
+                                                <div class="gallery__name">
+                                                  <p>фото</p>
+                                                </div>
+                                                <div class="gallery__data">
+                                                  <p>10.06.2018</p>
+                                                </div>
+                                              </li>
+                                              <li class="gallery__item col-sm-6"><a class="gallery__img" href="images/img-3.jpg" data-fancybox="gallery" style="background-image: url(images/img-3.jpg)"></a>
+                                                <div class="gallery__name">
+                                                  <p>фото</p>
+                                                </div>
+                                                <div class="gallery__data">
+                                                  <p>10.06.2018</p>
+                                                </div>
+                                              </li>
+                                              <li class="gallery__item col-sm-6">
+                                                <div class="gallery__video">
+                                                  <iframe src="https://www.youtube.com/embed/Dcrb5DF5yZo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                                                </div>
+                                                <div class="gallery__name">
+                                                  <p>видео</p>
+                                                </div>
+                                                <div class="gallery__data">
+                                                  <p>10.06.2018</p>
+                                                </div>
+                                              </li>
+                                              <li class="gallery__item col-sm-6"><a class="gallery__img" href="images/img-4.jpg" data-fancybox="gallery" style="background-image: url(images/img-4.jpg)"></a>
+                                                <div class="gallery__name">
+                                                  <p>фото</p>
+                                                </div>
+                                                <div class="gallery__data">
+                                                  <p>10.06.2018</p>
+                                                </div>
+                                              </li>
+                              </ul>
+              </div>
+              <div class="tab-pane fade" id="tab3">
+                              <ul class="gallery__list row">
+                                              <li class="gallery__item col-sm-6"><a class="gallery__img" href="images/img-1.jpg" data-fancybox="gallery" style="background-image: url(images/img-1.jpg)"></a>
+                                                <div class="gallery__name">
+                                                  <p>фото</p>
+                                                </div>
+                                                <div class="gallery__data">
+                                                  <p>10.06.2018</p>
+                                                </div>
+                                              </li>
+                                              <li class="gallery__item col-sm-6">
+                                                <div class="gallery__video">
+                                                  <iframe src="https://www.youtube.com/embed/Dcrb5DF5yZo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                                                </div>
+                                                <div class="gallery__name">
+                                                  <p>видео</p>
+                                                </div>
+                                                <div class="gallery__data">
+                                                  <p>10.06.2018</p>
+                                                </div>
+                                              </li>
+                                              <li class="gallery__item col-sm-6"><a class="gallery__img" href="images/img-2.jpg" data-fancybox="gallery" style="background-image: url(images/img-2.jpg)"></a>
+                                                <div class="gallery__name">
+                                                  <p>фото</p>
+                                                </div>
+                                                <div class="gallery__data">
+                                                  <p>10.06.2018</p>
+                                                </div>
+                                              </li>
+                                              <li class="gallery__item col-sm-6"><a class="gallery__img" href="images/img-3.jpg" data-fancybox="gallery" style="background-image: url(images/img-3.jpg)"></a>
+                                                <div class="gallery__name">
+                                                  <p>фото</p>
+                                                </div>
+                                                <div class="gallery__data">
+                                                  <p>10.06.2018</p>
+                                                </div>
+                                              </li>
+                                              <li class="gallery__item col-sm-6">
+                                                <div class="gallery__video">
+                                                  <iframe src="https://www.youtube.com/embed/Dcrb5DF5yZo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                                                </div>
+                                                <div class="gallery__name">
+                                                  <p>видео</p>
+                                                </div>
+                                                <div class="gallery__data">
+                                                  <p>10.06.2018</p>
+                                                </div>
+                                              </li>
+                                              <li class="gallery__item col-sm-6"><a class="gallery__img" href="images/img-4.jpg" data-fancybox="gallery" style="background-image: url(images/img-4.jpg)"></a>
+                                                <div class="gallery__name">
+                                                  <p>фото</p>
+                                                </div>
+                                                <div class="gallery__data">
+                                                  <p>10.06.2018</p>
+                                                </div>
+                                              </li>
+                              </ul>
+              </div>
+              <div class="tab-pane fade" id="tab4">
+                              <ul class="gallery__list row">
+                                              <li class="gallery__item col-sm-6"><a class="gallery__img" href="images/img-1.jpg" data-fancybox="gallery" style="background-image: url(images/img-1.jpg)"></a>
+                                                <div class="gallery__name">
+                                                  <p>фото</p>
+                                                </div>
+                                                <div class="gallery__data">
+                                                  <p>10.06.2018</p>
+                                                </div>
+                                              </li>
+                                              <li class="gallery__item col-sm-6">
+                                                <div class="gallery__video">
+                                                  <iframe src="https://www.youtube.com/embed/Dcrb5DF5yZo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                                                </div>
+                                                <div class="gallery__name">
+                                                  <p>видео</p>
+                                                </div>
+                                                <div class="gallery__data">
+                                                  <p>10.06.2018</p>
+                                                </div>
+                                              </li>
+                                              <li class="gallery__item col-sm-6"><a class="gallery__img" href="images/img-2.jpg" data-fancybox="gallery" style="background-image: url(images/img-2.jpg)"></a>
+                                                <div class="gallery__name">
+                                                  <p>фото</p>
+                                                </div>
+                                                <div class="gallery__data">
+                                                  <p>10.06.2018</p>
+                                                </div>
+                                              </li>
+                                              <li class="gallery__item col-sm-6"><a class="gallery__img" href="images/img-3.jpg" data-fancybox="gallery" style="background-image: url(images/img-3.jpg)"></a>
+                                                <div class="gallery__name">
+                                                  <p>фото</p>
+                                                </div>
+                                                <div class="gallery__data">
+                                                  <p>10.06.2018</p>
+                                                </div>
+                                              </li>
+                                              <li class="gallery__item col-sm-6">
+                                                <div class="gallery__video">
+                                                  <iframe src="https://www.youtube.com/embed/Dcrb5DF5yZo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                                                </div>
+                                                <div class="gallery__name">
+                                                  <p>видео</p>
+                                                </div>
+                                                <div class="gallery__data">
+                                                  <p>10.06.2018</p>
+                                                </div>
+                                              </li>
+                                              <li class="gallery__item col-sm-6"><a class="gallery__img" href="images/img-4.jpg" data-fancybox="gallery" style="background-image: url(images/img-4.jpg)"></a>
+                                                <div class="gallery__name">
+                                                  <p>фото</p>
+                                                </div>
+                                                <div class="gallery__data">
+                                                  <p>10.06.2018</p>
+                                                </div>
+                                              </li>
+                              </ul>
+              </div>
+              <div class="tab-pane fade" id="tab5">
+                              <ul class="gallery__list row">
+                                              <li class="gallery__item col-sm-6"><a class="gallery__img" href="images/img-1.jpg" data-fancybox="gallery" style="background-image: url(images/img-1.jpg)"></a>
+                                                <div class="gallery__name">
+                                                  <p>фото</p>
+                                                </div>
+                                                <div class="gallery__data">
+                                                  <p>10.06.2018</p>
+                                                </div>
+                                              </li>
+                                              <li class="gallery__item col-sm-6">
+                                                <div class="gallery__video">
+                                                  <iframe src="https://www.youtube.com/embed/Dcrb5DF5yZo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                                                </div>
+                                                <div class="gallery__name">
+                                                  <p>видео</p>
+                                                </div>
+                                                <div class="gallery__data">
+                                                  <p>10.06.2018</p>
+                                                </div>
+                                              </li>
+                                              <li class="gallery__item col-sm-6"><a class="gallery__img" href="images/img-2.jpg" data-fancybox="gallery" style="background-image: url(images/img-2.jpg)"></a>
+                                                <div class="gallery__name">
+                                                  <p>фото</p>
+                                                </div>
+                                                <div class="gallery__data">
+                                                  <p>10.06.2018</p>
+                                                </div>
+                                              </li>
+                                              <li class="gallery__item col-sm-6"><a class="gallery__img" href="images/img-3.jpg" data-fancybox="gallery" style="background-image: url(images/img-3.jpg)"></a>
+                                                <div class="gallery__name">
+                                                  <p>фото</p>
+                                                </div>
+                                                <div class="gallery__data">
+                                                  <p>10.06.2018</p>
+                                                </div>
+                                              </li>
+                                              <li class="gallery__item col-sm-6">
+                                                <div class="gallery__video">
+                                                  <iframe src="https://www.youtube.com/embed/Dcrb5DF5yZo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                                                </div>
+                                                <div class="gallery__name">
+                                                  <p>видео</p>
+                                                </div>
+                                                <div class="gallery__data">
+                                                  <p>10.06.2018</p>
+                                                </div>
+                                              </li>
+                                              <li class="gallery__item col-sm-6"><a class="gallery__img" href="images/img-4.jpg" data-fancybox="gallery" style="background-image: url(images/img-4.jpg)"></a>
+                                                <div class="gallery__name">
+                                                  <p>фото</p>
+                                                </div>
+                                                <div class="gallery__data">
+                                                  <p>10.06.2018</p>
+                                                </div>
+                                              </li>
+                              </ul>
+              </div>
+              <div class="tab-pane fade" id="tab6"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+<footer>
+  <div class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__left">
+          <div class="footer__develop"><a href="https://unitspace.top" target="_blank">Разработка сайтов</a></div>
+        </div>
+        <div class="footer__center">
+          <div class="footer__copyright">
+            <p>© 2018 karafetov.com. Все права защищены</p>
+          </div>
+        </div>
+        <div class="footer__right">
+          <div class="footer__socials">
+            <ul>
+              <li><a href="https://instagram.com" target="_blank"><span class="fa fa-instagram"></span></a></li>
+              <li><a href="https://facebook.com" target="_blank"><span class="fa fa-facebook"></span></a></li>
+              <li><a href="https://soundcloud.com" target="_blank"><span class="fa fa-soundcloud"></span></a></li>
+              <li><a href="https://www.apple.com/apple-music/" target="_blank"><span class="fa-apple-music-o fa-stack"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-music fa-stack-1x"></i></span></a></li>
+              <li><a href="https://youtube.com" target="_blank"><span class="fa fa-youtube-play"></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+    </div>
+  <script type="text/javascript" src="js/bundle.js"></script></body>
+</html>

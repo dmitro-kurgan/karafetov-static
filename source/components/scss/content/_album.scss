@@ -1,0 +1,281 @@
+.wrapper {
+	overflow: hidden;
+	&--album {
+		.breadcrumb {
+			padding: 14px 0;
+			@media #{$mobile} {
+				padding: 15px;
+			}
+		}
+	}
+}
+.album {
+	padding-bottom: 150px;
+	&__banner {
+		padding-top: 40px;
+		padding-bottom: 40px;
+		position: relative;
+		&-content {
+			display: flex;
+			align-items: center;
+			position: relative;
+			@media #{$mobile} {
+				display: block;
+			}
+		}
+		&-cover {
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+			@include addPrefix(filter, blur(5px));
+		}
+	}
+	&__cover {
+		width: 430px;
+		height: 430px;
+		border-radius: 10px;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		@media #{$tablet} {
+			height: 350px;
+			width: 350px;
+		}
+		@media #{$mobile} {
+			height: 280px;
+			max-width: 320px;
+			width: 100%;
+		}
+	}
+	&__info {
+		margin-left: 70px;
+		@media #{$tablet} {
+			margin-left: 30px;
+		}
+		@media #{$mobile} {
+			margin-left: 0px;
+		}
+		& > div + div {
+			margin-top: 15px;
+		}
+	}
+	&__title {
+		font-size: 56px;
+		font-weight: 700;
+	}
+	&__artist {
+		font-size: 24px;
+		font-weight: 500;
+	}
+	&__genre, &__more {
+		font-size: 24px;
+		font-weight: 600;
+		font-family: $second_font;
+	}
+	&__more {
+		color: #abaaaa;
+		ul {
+			display: flex;
+		}
+		li {
+			position: relative;
+			& + li {
+				margin-left: 30px;
+				&:before {
+					content: '';
+					position: absolute;
+					top: 0px;
+					bottom: 0px;
+					left: -15px;
+					margin: auto;
+					width: 4px;
+					height: 4px;
+					border-radius: 50%;
+					background-color: #abaaaa;
+				}
+			}
+		}
+	}
+	&__list {
+		padding-top: 50px;
+		&-left {
+
+		}
+		&-right {
+			display: flex;
+			align-items: center;
+			@media #{$mobile} {
+				display: block;
+			}
+		}
+		& > ul {
+			& > li {
+				padding: 20px 0px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				border-bottom: 1px solid #333333;
+				@media #{$mobile} {
+					display: block;
+				}
+			}
+		}
+	}
+	&__name {
+		@media #{$tablet} {
+			max-width: 300px;
+		}
+		span {
+			font-family: $second_font;
+			font-size: 24px;
+			font-weight: 700;
+			@media #{$tablet} {
+				font-size: 18px;
+			}
+			& + span {
+				font-size: 20px;
+				font-weight: 500;
+				padding-left: 35px;
+				@media #{$tablet} {
+					font-size: 18px;
+					padding-left: 15px;
+				}
+			}
+		}
+	}
+	&__time {
+		padding-right: 65px;
+		@media #{$tablet} {
+			padding-right: 20px;
+		}
+		@media #{$mobile} {
+			margin: 15px 0 25px 0;
+		}
+		&:before {
+			content: '';
+			display: block;
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-image: url(../images/clock.svg);
+			width: 15px;
+			height: 15px;
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 3px;
+		}
+		p, span {
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 20px;
+			font-weight: 500;
+			color: #767676;
+			@media #{$tablet} {
+				font-size: 18px;
+			}
+		}
+	}
+	&__btns {
+		ul {
+			display: flex;
+			@media #{$mobile} {
+				display: block;
+			}
+			li {
+				& + li {
+					margin-left: 10px;
+					@media #{$mobile} {
+						margin-left: 0px;
+						margin-top: 10px;
+					}
+				}
+			}
+		}
+		a {
+			display: block;
+		}
+		img {
+			width: 135px;
+			height: 40px;
+			@media #{$tablet} {
+				width: 100px;
+				height: 30px;
+			}
+			@media #{$mobile} {
+				width: 135px;
+				height: 40px;
+			}
+		}
+	}
+	&__slider {
+		overflow: hidden;
+		margin-top: 120px;
+		padding-left: 45px;
+		padding-right: 45px;
+		@media #{$mobile} {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		h2 {
+			font-size: 36px;
+			font-family: $second_font;
+			text-transform: uppercase;
+			margin-bottom: 45px;;
+		}
+		.slick-list {
+			margin: 0 -100px;
+			// margin: 0px -160px;
+			// padding-right: 50px;
+			// padding-left: 50px;
+			@media #{$desctop} {
+				margin: 0px;
+			}
+		}
+		.slick-slide {
+			padding: 0 50px;
+			@media #{$desctop} {
+				padding: 0 0px;
+			}
+		}
+		.slick-next, .slick-prev {
+			z-index: 1;
+			top: calc(50% - 60px);
+			&:before {
+				content: '';
+				position: absolute;
+				width: 0px;
+				height: 0px;
+				padding: 7px;
+				border-style: solid;
+				border-color: #fff;
+				border-width: 0px 3px 3px 0px;
+				bottom: 0px;
+				left: 0px;
+			}
+		}
+		.slick-prev {
+			left: -40px;
+			@include addPrefix(transform, rotate(135deg));
+			@media #{$mobile} {
+				left: 0px;
+			}
+		}
+		.slick-next {
+			right: -40px;
+			@include addPrefix(transform, rotate(-45deg));
+			@media #{$mobile} {
+				right: 0px;
+			}
+		}
+		.albums__item {
+			width: 296px;
+			padding: 0px;
+			margin: auto;
+		}
+	}
+}

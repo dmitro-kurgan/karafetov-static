@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Новости</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no">
+  <link href="./css/style.css" rel="stylesheet"></head>
+  <body class="article-page">
+    <div class="wrapper wrapper--article">
+            <header>
+              <div class="header">
+                <div class="container">
+                  <div class="header__content">
+                    <div class="header__left" id="headerLeft">
+                      <div class="header__hamburger" id="hamburger"><span class="header__hamburger--top"></span><span class="header__hamburger--mid"></span><span class="header__hamburger--bottom"></span></div>
+                      <ul class="clearfix" id="headerLeftMenu">
+                        <li><a href="./">Главная</a></li>
+                        <li><a href="news.html">Новости</a></li>
+                        <li><a href="bio.html">Биография</a></li>
+                      </ul>
+                    </div>
+                    <div class="header__center">
+                      <div class="header__logo"><a href="./"></a></div>
+                    </div>
+                    <div class="header__right" id="headerRight">
+                      <ul class="clearfix" id="headerRightMenu">
+                        <li><a href="albums.html">Дискография</a></li>
+                        <li><a href="gallery.html">Гелерея</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="header__lang"><a href="#">rus</a></div>
+                  <div class="header__mob-menu" id="mobMenu"></div>
+                </div>
+              </div>
+            </header>
+      <div class="content">
+        <div class="article container">
+          <div class="breadcrumb">
+            <div class="breadcrumb__content">
+              <ul class="clearfix">
+                <li><a href="./">Главная</a></li>
+                <li><a href="news.html">Новости</a></li>
+                <li>мероприятия</li>
+              </ul>
+            </div>
+          </div>
+          <div class="article__title">
+            <h1>Цыганское шоу в Мариуполе</h1>
+          </div>
+          <div class="article__text-top">
+            <p>Значимость этих проблем настолько очевидна, что сложившаяся структура организации представляет собой интересный эксперимент проверки существенных финансовых и административных условий. Не следует, однако забывать, что укрепление и развитие структуры в значительной степени обуславливает создание существенных финансовых и административных условий. </p>
+          </div>
+          <section class="article__block row">
+            <div class="article__block-left col-md-4">
+              <h2>Наше выступление в Мариуполе</h2>
+              <p>Задача организации, в особенности же постоянное, длительное информационно-пропагандистское обеспечение нашей деятельности</p><a href="https://youtube.com" target="_blank">Смотреть в<span>youtube</span></a>
+            </div>
+            <div class="article__block-right col-md-8">
+              <div class="article__video" id="media-player" onclick="togglePlayPause();">
+                <div class="article__preview" id="video-preview" style="background-image: url(images/poster-1.jpg)"></div>
+                <video id="media-video" controls>
+                  <source src="videos/vladimir_karafetov_krov_ciganskaya.mp4" type="video/mp4">
+                </video>
+                <div class="article__controls" id="media-controls">
+                  <button class="play" id="play-pause-button" title="play"><img src="images/play.png" alt=""></button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+<footer>
+  <div class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__left">
+          <div class="footer__develop"><a href="https://unitspace.top" target="_blank">Разработка сайтов</a></div>
+        </div>
+        <div class="footer__center">
+          <div class="footer__copyright">
+            <p>© 2018 karafetov.com. Все права защищены</p>
+          </div>
+        </div>
+        <div class="footer__right">
+          <div class="footer__socials">
+            <ul>
+              <li><a href="https://instagram.com" target="_blank"><span class="fa fa-instagram"></span></a></li>
+              <li><a href="https://facebook.com" target="_blank"><span class="fa fa-facebook"></span></a></li>
+              <li><a href="https://soundcloud.com" target="_blank"><span class="fa fa-soundcloud"></span></a></li>
+              <li><a href="https://www.apple.com/apple-music/" target="_blank"><span class="fa-apple-music-o fa-stack"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-music fa-stack-1x"></i></span></a></li>
+              <li><a href="https://youtube.com" target="_blank"><span class="fa fa-youtube-play"></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function() { initialiseMediaPlayer(); }, false);
+      
+      var mediaPlayer;
+      
+      function initialiseMediaPlayer() {
+      	mediaPlayer = document.getElementById('media-video');
+      	mediaPlayer.controls = false;
+      }
+      
+      function togglePlayPause() {
+      	var btn = document.getElementById('play-pause-button');
+      	var preview = document.getElementById('video-preview');
+      	if (mediaPlayer.paused || mediaPlayer.ended) {
+      		btn.title = 'pause';
+      		//- btn.innerHTML = 'pause';
+      		btn.className = 'pause';
+      		mediaPlayer.play();
+      	}
+      	else {
+      		btn.title = 'play';
+      		//- btn.innerHTML = 'play';
+      		btn.className = 'play';
+      		mediaPlayer.pause();
+      	}
+      }
+    </script>
+  <script type="text/javascript" src="js/bundle.js"></script></body>
+</html>

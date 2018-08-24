@@ -1,0 +1,598 @@
+.wrapper {
+	overflow: hidden;
+	&--bio {
+		.breadcrumb {
+			padding: 14px 0;
+			@media #{$mobile} {
+				padding: 15px;
+			}
+		}
+	}
+}
+.bio-top {
+	&__banner {
+		height: calc(100vh - 146px);
+		background-size: cover;
+		background-position: top;
+		background-repeat: no-repeat;
+		@media #{$mobile} {
+			height: calc(100vh - 108px);
+		}
+		&-text {
+			height: 100%;
+			display: flex;
+			align-items: flex-end;
+			padding-bottom: 140px;
+			@media #{$desctop-md} {
+				padding-bottom: 100px;
+			}
+			@media #{$desctop} {
+				padding-bottom: 75px;
+			}
+			@media #{$mobile} {
+			    padding-bottom: 35px;
+			}
+		}
+		h4 {
+			color: #838383;
+			font-size: 21px;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+		h1 {
+			font-size: 60px;
+			font-family: $second_font;
+			font-weight: 700;
+			margin: 15px 0 70px 0;
+			@media #{$desctop-md} {
+				font-size: 48px;
+			}
+			@media #{$mobile} {
+				font-size: 32px;
+				margin: 15px 0 35px 0;
+			}
+		}
+		ul {
+			li {
+				float: left;
+				@media #{$mobile} {
+					flaot: none;
+				}
+				& + li {
+					margin-left: 50px;
+					@media #{$mobile} {
+						margin-left: 0px;
+					}
+				}
+				span {
+					color: #aeaeae;
+					font-size: 16px;
+					font-weight: 700;
+					margin-right: 7px;
+				}
+				a {
+					font-size: 24px;
+					font-family: $second_font;
+					ont-weight: 600;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}
+.bio {
+	padding-top: 85px;
+	padding-bottom: 160px;
+	@media #{$mobile} {
+		padding-top: 50px;
+		padding-bottom: 80px;
+	}
+	&-top {
+		&__banner-text {
+			position: relative;
+		}
+		&__banner-down {
+			position: absolute;
+			right: 0px;
+			bottom: 25px;
+			height: 35px;
+			width: 24px;
+			@media #{$mobile} {
+				right: 15px;
+			}
+			&:before, &:after {
+				content: '';
+				position: absolute;
+				left: 0px;
+				right: 0px;
+				margin: auto;
+			}
+			&:before {
+				width: 0px;
+				height: 0px;
+				padding: 8px;
+				border-style: solid;
+				border-color: #fff;
+				border-width: 0px 4px 4px 0px;
+				@include addPrefix(transform, rotate(45deg));
+				bottom: 0px;
+				left: 0px;
+				border-radius: 4px;
+			}
+			&:after {
+				width: 4px;
+				height: 35px;
+				background-color: #fff;
+				top: 0px;
+				border-radius: 4px;
+			}
+		}
+	}
+	h2 {
+		font-size: 36px;
+		font-family: $second_font;
+		text-transform: uppercase;
+		margin-bottom: 50px;
+	}
+	&__content {
+		padding-top: 200px;
+		@media #{$tablet} {
+			padding-top: 100px;
+		}
+		@media #{$mobile} {
+			padding-top: 65px;
+		}
+	}
+	&__nav {
+		padding: 0 30px;
+		@media #{$tablet} {
+			padding: 0px;
+		}
+		.nav-tabs {
+			display: flex;
+			justify-content: space-between;
+			border: none;
+			position: relative;
+			&:after {
+				display: none;
+			}
+			&:before {
+				content: '';
+				position: absolute;
+				background-color: #454545;
+				height: 2px;
+				width: 10000px;
+				left: -50%;
+				right: -50%;
+			}
+			& > li {
+				float: none;
+				& > a {
+					background-color: transparent;
+					border: none;
+					padding: 0px;
+					position: relative;
+					padding-top: 45px;
+					&:before {
+						content: '';
+						top: -3px;
+						left: 0px;
+						right: 0px;
+						margin: auto;
+						position: absolute;
+						width: 8px;
+						height: 8px;
+						border-radius: 50%;
+						background-color: #fff;
+						z-index: 1;
+					}
+					&:after {
+						content: '';
+						position: absolute;
+						top: -25px;
+						left: -21px;
+						right: -21px;
+						margin: auto;
+						background-color: #323244;
+						width: 50px;
+						height: 50px;
+						border-radius: 50%;
+						opacity: 0;
+						transition: 0.3s all ease;
+					}
+				}
+				&.active {
+					& > a {
+						color: #fff;
+						background-color: transparent;
+						border: none;
+						&:after {
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+	}
+	&__box {
+		position: relative;
+		& + .bio__box {
+			margin-top: 260px;
+		}
+		&-text {
+			position: relative;
+			h3 {
+				position: absolute;
+				top: -95px;
+				color: rgba(#818184, 0.12);
+				font-size: 155px;
+				font-weight: 600;
+				@media #{$tablet} {
+					font-size: 90px;
+					top: -50px;
+				}
+				@media #{$mobile} {
+					font-size: 62px;
+					top: -30px;
+				}
+			}
+			span {
+				color: #818184;
+				font-size: 24px;
+				font-weight: 700;
+				text-transform: uppercase;
+				margin-bottom: 30px;
+				display: block;
+				@media #{$mobile} {
+					font-size: 18px;
+				}
+			}
+			p {
+				font-family: $second_font;
+				font-size: 25px;
+				line-height: 36px;
+				@media #{$mobile} {
+					font-size: 18px;
+				}
+			}
+		}
+		ul {
+			&:nth-child(odd) {
+				.bio__box-img {
+					height: 590px;
+					background-position: center;
+					background-size: cover;
+					background-repeat: no-repeat;
+					@media #{$tablet} {
+						height: 420px;
+					}
+					@media #{$mobile} {
+						display: none;
+					}
+				}
+			}
+			&:nth-child(even) {
+				.bio__box-img {
+					height: 525px;
+					background-position: center;
+					background-size: cover;
+					background-repeat: no-repeat;
+					@media #{$tablet} {
+						height: 420px;
+					}
+					@media #{$mobile} {
+						display: none;
+					}
+				}
+			}
+			& + ul {
+				margin-top: 65px;
+			}
+		}
+		.borders {
+			&__left, &__right {
+				display: block;
+				position: absolute;
+			}
+			&__left, &__right {
+				&:before, &:after {
+					content: '';
+					position: absolute;
+					background-color: #1a1b1b;
+				}
+				&:before {
+					width: 130px;
+					height: 6px;
+				}
+				&:after {
+					width: 6px;
+				}
+			}
+		}
+		&:nth-child(odd) {
+			.borders {
+				@media #{$mobile} {
+					display: none;
+				}
+				&__left {
+					left: -35px;
+					height: calc(100% + 35px);
+					top: -35px;
+				}
+				&__right {
+					right: -35px;
+				    height: calc(100% + 35px);
+				    bottom: -35px;
+				    @include addPrefix(transform, scale(-1));
+				}
+				&__left, &__right {
+					&:after {
+						height: 100%;
+					}
+				}
+			}
+			.bio__box-text {
+				h3 {
+					right: 0px;
+				}
+				span {
+					text-align: left;
+				}
+			}
+			ul {
+				&:nth-child(odd) {
+					.bio__box-right {
+						padding-left: 70px;
+						@media #{$tablet} {
+							padding-left: 30px;
+						}
+					}
+				}
+				&:nth-child(even) {
+					.bio__box-right {
+						padding-left: 70px;
+						@media #{$tablet} {
+							padding-left: 30px;
+						}
+					}
+				}
+			}
+		}
+		&:nth-child(even) {
+			margin-top: 260px;
+			@media #{$tablet} {
+				margin-top: 150px;
+			}
+			@media #{$mobile} {
+				margin-top: 65px;
+			}
+			.borders {
+				@media #{$mobile} {
+					display: none;
+				}
+				&__left {
+					left: -35px;
+					bottom: -35px;
+					@include addPrefix(transform, scale(1, -1));
+				}
+				&__right {
+					right: -35px;
+				    top: -35px;
+				    @include addPrefix(transform, scale(-1, 1));
+				}
+				&__left, &__right {
+					height: 230px;
+					&:after {
+						height: 100%;
+					}
+				}
+			}
+			ul {
+				&:nth-child(odd) {
+					.bio__box-left {
+						padding-right: 70px;
+						@media #{$mobile} {
+							padding-right: 15px;
+						}
+					}
+					.bio__box-text {
+						h3 {
+							left: 0px;
+						}
+						span {
+							text-align: right;
+						}
+					}
+				}
+				&:nth-child(even) {
+					.bio__box-left {
+						padding-right: 70px;
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+
+/*************** SCROLLBAR BASE CSS ***************/
+ 
+.scroll-wrapper {
+    padding-right: 20px;
+	height: 475px;
+    overflow: hidden !important;
+    // padding: 0 !important;
+    position: relative;
+    @media #{$tablet} {
+    	height: 370px;
+    }
+}
+ 
+.scroll-wrapper > .scroll-content {
+    border: none !important;
+    box-sizing: content-box !important;
+    height: auto;
+    left: 0;
+    margin: 0;
+    max-height: none;
+    max-width: none !important;
+    overflow: scroll !important;
+    padding: 0;
+    position: relative !important;
+    top: 0;
+    width: auto !important;
+}
+ 
+.scroll-wrapper > .scroll-content::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+}
+ 
+.scroll-element {
+    display: none;
+}
+.scroll-element, .scroll-element div {
+    box-sizing: content-box;
+}
+ 
+.scroll-element.scroll-x.scroll-scrollx_visible,
+.scroll-element.scroll-y.scroll-scrolly_visible {
+    display: block;
+}
+ 
+.scroll-element .scroll-bar,
+.scroll-element .scroll-arrow {
+    cursor: default;
+}
+ 
+.scroll-textarea {
+    border: 1px solid #cccccc;
+    border-top-color: #999999;
+}
+.scroll-textarea > .scroll-content {
+    overflow: hidden !important;
+}
+.scroll-textarea > .scroll-content > textarea {
+    border: none !important;
+    box-sizing: border-box;
+    height: 100% !important;
+    margin: 0;
+    max-height: none !important;
+    max-width: none !important;
+    overflow: scroll !important;
+    outline: none;
+    padding: 2px;
+    position: relative !important;
+    top: 0;
+    width: 100% !important;
+}
+.scroll-textarea > .scroll-content > textarea::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+}
+ 
+ 
+ 
+ 
+/*************** SIMPLE INNER SCROLLBAR ***************/
+ 
+.scrollbar-inner > .scroll-element,
+.scrollbar-inner > .scroll-element div
+{
+    border: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 10;
+}
+ 
+.scrollbar-inner > .scroll-element div {
+    display: block;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+ 
+.scrollbar-inner > .scroll-element.scroll-x {
+    bottom: 2px;
+    height: 8px;
+    left: 0;
+    width: 100%;
+}
+ 
+.scrollbar-inner > .scroll-element.scroll-y {
+    height: 100%;
+    right: 0px;
+    top: 0;
+    width: 8px;
+  //   &:before, &:after {
+  //   	content: '';
+  //   	position: absolute;
+  //   	background: url(../images/scroll-arrow.png)no-repeat;
+  //   	width: 7px;
+  //   	height: 6px;
+		// pointer-events: none;
+		// right: 1.5px;
+		// z-index: 99;
+  //   }
+  //   &:before {
+  //   	top: 4px;
+  //   }
+  //   &:after {
+  //   	bottom: 4px;
+  //   	@include addPrefix(transform, rotate(180deg));
+  //   }
+}
+ 
+.scrollbar-inner > .scroll-element .scroll-element_outer {
+    overflow: hidden;
+}
+ 
+.scrollbar-inner > .scroll-element .scroll-element_outer,
+.scrollbar-inner > .scroll-element .scroll-element_track,
+.scrollbar-inner > .scroll-element .scroll-bar {
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+ 
+.scrollbar-inner > .scroll-element .scroll-element_track,
+.scrollbar-inner > .scroll-element .scroll-bar {
+    // -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    // filter: alpha(opacity=40);
+    // opacity: 0.4;
+    transition: .3s filter, .3s opacity;
+}
+ 
+.scrollbar-inner > .scroll-element .scroll-element_track { background-color: rgba(#fff, 0.1); }
+.scrollbar-inner > .scroll-element .scroll-bar { 
+	background-color: rgba(#fff, 1);
+	// background: url(../images/scroll.png)no-repeat center;
+	// width: 10px;
+	// height: 24px;
+	// background-size: cover;
+}
+// .scrollbar-inner > .scroll-element:hover .scroll-bar {
+// 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+//     filter: alpha(opacity=40);
+//     opacity: 0.4;
+// }
+// .scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar {
+// 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+//     filter: alpha(opacity=40);
+//     opacity: 0.4;
+// }
+ 
+ 
+/* update scrollbar offset if both scrolls are visible */
+ 
+.scrollbar-inner > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_track { left: -12px; }
+.scrollbar-inner > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_track { top: -12px; }
+ 
+ 
+.scrollbar-inner > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size { left: -12px; }
+.scrollbar-inner > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size { top: -12px; }

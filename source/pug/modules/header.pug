@@ -1,0 +1,31 @@
+mixin header()
+	header
+		.header
+			.container
+				.header__content
+					.header__left#headerLeft
+						.header__hamburger#hamburger
+							span.header__hamburger--top
+							span.header__hamburger--mid
+							span.header__hamburger--bottom
+						ul.clearfix#headerLeftMenu
+							li
+								a(class=(page === "index") ? "active" : "", href="./") Главная
+							li
+								a(class=(page === "news") ? "active" : "", href="news.html") Новости
+							li
+								a(class=(page === "bio") ? "active" : "", href="bio.html") Биография
+					.header__center
+						.header__logo
+							a(href="./")
+					.header__right#headerRight
+						ul.clearfix#headerRightMenu
+							li
+								a(class=(page === "albums") ? "active" : "", href="albums.html") Дискография
+							li
+								a(class=(page === "gallery") ? "active" : "", href="gallery.html") Гелерея
+							li
+								a(class=(page === "contacts") ? "active" : "", href="contacts.html") Контакты
+				.header__lang
+					a(href="#") rus
+				.header__mob-menu#mobMenu

@@ -1,0 +1,71 @@
+extends ../templates/base
+
+include ../templates/mixins
+
+block variables
+	- var classBody = 'article-page';
+	- var classWrapper = 'article';
+	- var page = "article"; 
+	- var pageName = 'Новости';
+
+block title
+	title #{pageName}
+
+block header
+	include ../modules/header
+	+header()
+
+block main
+	.article.container
+		+breadcrumb()
+			li
+				a(href='news.html') #{pageName}
+			li мероприятия
+		.article__title
+			h1 Цыганское шоу в Мариуполе
+		.article__text-top
+			p
+				| Значимость этих проблем настолько очевидна, что сложившаяся структура организации представляет собой интересный эксперимент проверки существенных финансовых и административных условий. Не следует, однако забывать, что укрепление и развитие структуры в значительной степени обуславливает создание существенных финансовых и административных условий. 
+		section.article__block.row
+			.article__block-left.col-md-4
+				h2 Наше выступление в Мариуполе
+				p
+					| Задача организации, в особенности же постоянное, длительное информационно-пропагандистское обеспечение нашей деятельности
+				a(href="https://youtube.com", target="_blank") Смотреть в
+					span youtube
+			.article__block-right.col-md-8
+				#media-player.article__video(onclick="togglePlayPause();")
+					.article__preview#video-preview(style="background-image: url(" + require('../../components/images/poster-1.jpg') + ")")
+					video#media-video(controls)
+						source(src=require("../../components/videos/vladimir_karafetov_krov_ciganskaya.mp4"), type="video/mp4") 
+						//- source(src="parrots.webm", type="video/mp4")
+					.article__controls#media-controls
+						button#play-pause-button.play(title="play")
+							img(src=require("../../components/images/play.png"), alt="")
+block script
+	script(type="text/javascript").
+		document.addEventListener("DOMContentLoaded", function() { initialiseMediaPlayer(); }, false);
+		
+		var mediaPlayer;
+
+		function initialiseMediaPlayer() {
+			mediaPlayer = document.getElementById('media-video');
+			mediaPlayer.controls = false;
+		}
+
+		function togglePlayPause() {
+			var btn = document.getElementById('play-pause-button');
+			var preview = document.getElementById('video-preview');
+			if (mediaPlayer.paused || mediaPlayer.ended) {
+				btn.title = 'pause';
+				//- btn.innerHTML = 'pause';
+				btn.className = 'pause';
+				mediaPlayer.play();
+			}
+			else {
+				btn.title = 'play';
+				//- btn.innerHTML = 'play';
+				btn.className = 'play';
+				mediaPlayer.pause();
+			}
+		}

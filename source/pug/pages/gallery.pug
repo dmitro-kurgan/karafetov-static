@@ -1,0 +1,72 @@
+extends ../templates/base
+
+include ../templates/mixins
+
+block variables
+	- var classBody = 'gallery-page';
+	- var classWrapper = 'gallery';
+	- var page = "gallery"; 
+	- var pageName = 'Галерея';
+
+block title
+	title #{pageName}
+
+block header
+	include ../modules/header
+	+header()
+
+block main
+	section.gallery.container
+		.gallery__top.row
+			.gallery__top-left.col-md-6
+				+breadcrumb()
+				.gallery__title
+					h2 #{pageName}
+			.gallery__top-right.col-md-6
+				.gallery__nav
+					ul.nav.nav-tabs
+						li.active
+							a(href="#tab1", data-toggle="tab") Все
+						li
+							a(href="#tab2", data-toggle="tab") Видео
+						li
+							a(href="#tab3", data-toggle="tab") Фото
+						li
+							a(href="#tab4", data-toggle="tab") Цыганское шоу
+						li
+							a(href="#tab5", data-toggle="tab") Музыканты
+		.gallery__content
+			.tab-content
+				mixin tab(name, img)
+					li.gallery__item.col-sm-6
+						if block
+							block
+						else
+							a.gallery__img(href=require("../../components/images/img-" + img + '.jpg'), data-fancybox="gallery", style="background-image: url(" + require('../../components/images/img-' + img + '.jpg') + ")")
+						.gallery__name
+							p #{name}
+						.gallery__data
+							p 10.06.2018
+				mixin items()
+					ul.gallery__list.row
+						+tab('фото', '1')
+						+tab('видео')
+							.gallery__video
+								iframe(src='https://www.youtube.com/embed/Dcrb5DF5yZo', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
+						+tab('фото', '2')
+						+tab('фото', '3')
+						+tab('видео')
+							.gallery__video
+								iframe(src='https://www.youtube.com/embed/Dcrb5DF5yZo', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
+						+tab('фото', '4')
+				#tab1.tab-pane.fade.in.active
+					+items()
+				#tab2.tab-pane.fade
+					+items()
+				#tab3.tab-pane.fade
+					+items()
+				#tab4.tab-pane.fade
+					+items()
+				#tab5.tab-pane.fade
+					+items()
+				#tab6.tab-pane.fade

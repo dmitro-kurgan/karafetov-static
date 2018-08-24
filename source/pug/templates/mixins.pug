@@ -1,0 +1,13 @@
+mixin breadcrumb()
+	.breadcrumb
+		.breadcrumb__content
+			if block
+				ul.clearfix
+					li
+						a(href='./') Главная
+					block
+			else
+				ul.clearfix
+					li
+						a(href='./') Главная
+					li #{pageName}

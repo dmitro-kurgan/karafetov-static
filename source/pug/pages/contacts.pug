@@ -1,0 +1,115 @@
+extends ../templates/base
+
+include ../templates/mixins
+
+block variables
+	- var classBody = 'contacts-page';
+	- var classWrapper = 'contacts';
+	- var page = "contacts"; 
+	- var pageName = 'Контакты';
+
+block title
+	title #{pageName}
+
+block header
+	include ../modules/header
+	+header()
+
+block main
+	+breadcrumb()
+	.contacts.container
+		ul.row
+			li.contacts__left.col-md-4
+				h2
+					| Наши
+					br
+					| контакты
+				.contacts__contacts
+					ul.clearfix
+						li
+							span
+								| Менеджер шоу Ирина:
+							a(href="tel:+380661888876") +38(066) 18 88 876
+						li
+							span
+								| E-mail:
+							a(href="mailto:show.karafetov@gmail.com") show.karafetov@gmail.com
+				.contacts__socials
+					h2
+						| Мы в социальных
+						br
+						| сетях
+					ul.clearfix
+						li
+							a(href="https://youtube.com", target="_blank").contacts__socials--youtube
+								span.fa.fa-youtube-play
+								p Youtube
+						li
+							a(href="https://instagram.com", target="_blank").contacts__socials--instagram
+								span.fa.fa-instagram
+								p Instagram
+						li
+							a(href="https://soundcloud.com", target="_blank").contacts__socials--soundcloud
+								span.fa.fa-soundcloud
+								p Soundcloud
+						li
+							a(href="https://facebook.com", target="_blank").contacts__socials--facebook
+								span.fa.fa-facebook
+								p Facebook
+						li
+							a(href="https://www.apple.com/apple-music/", target="_blank").contacts__socials--itunes
+								span.fa-apple-music-o.fa-stack
+									i.fa.fa-circle-thin.fa-stack-2x
+									i.fa.fa-music.fa-stack-1x
+								p Itunes
+						li
+							a(href="https://facebook.com", target="_blank").contacts__socials--facebook
+								span.fa.fa-vk
+								p Vkontakte
+			li.contacts__right.col-md-8
+				form.contacts__form
+					h2
+						| Свяжитесь
+						br
+						| с нами
+					ul.row
+						li.contacts__radio.form-group.col-sm-12
+							.radio.active
+								label(for='radio1')
+									input(type='radio', name='radio', id='radio1')
+									.radio-circle
+									| Организация концертов
+						li.contacts__radio.form-group.col-sm-12
+							.radio
+								label(for='radio2')
+									input(type='radio', name='radio', id='radio2')
+									.radio-circle
+									| Сотрудничество
+						li.contacts__radio.form-group.col-sm-12
+							.radio
+								label(for='radio3')
+									input(type='radio', name='radio', id='radio3')
+									.radio-circle
+									| Организация шоу
+						li.form-group.form-group--title.col-sm-12
+							h3 Имя*
+						li.form-group.col-sm-6
+							input.form-control(type="text", placeholder="Ваше имя", id="name", required)
+						li.form-group.col-sm-6
+							input.form-control(type="text", placeholder="Ваша компания", id="company")
+						li.form-group.form-group--title.col-sm-12
+							h3 Информация*
+						li.form-group.col-sm-6
+							input.form-control(type="text", placeholder="E-mail", id="email", required)
+						li.form-group.col-sm-6
+							input.form-control(type="text", placeholder="Телефон", id="tel", required)
+						li.form-group.form-group--title.col-sm-12
+							h3 Сообщение
+						li.form-group.col-sm-12
+							textarea.form-control(type="text", placeholder="Ваше сообщение", id="email")
+						li.form-group.col-sm-12.contacts__btns
+							.contacts__form-attachfile
+								input(id="file", type="file", name="file", class="inputfile btn", data-multiple-caption="{count} files", multiple)
+								label(for='file')
+									span Прикрепить
+							button(type="submit").btn Отправить
