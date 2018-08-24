@@ -1,0 +1,1 @@
+# karafetov-static
